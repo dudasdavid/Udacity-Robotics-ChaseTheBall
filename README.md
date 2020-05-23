@@ -51,8 +51,7 @@ tree
 │   ├── package.xml
 │   ├── src
 │   │   ├── drive_bot.cpp                       # Sends the twist commands the robot
-│   │   ├── process_image.cpp                   # Calculates velcoities based on camera image
-│   │   └── teleop_key.cpp                      # key teleop node based on turtlesim's teleop node
+│   │   └── process_image.cpp                   # Calculates velcoities based on camera image
 │   └── srv                                     # Custom DriveToTarget service description
 │       └── DriveToTarget.srv
 └── my_robot                                    # ball chaser node
@@ -81,6 +80,7 @@ tree
 ```
 
 ### Remarks:
+* To drive the robot inside Gazebo you can use the teleop_twist_keyboard that sends cmd_vel commands: http://wiki.ros.org/teleop_twist_keyboard
 * However the project requested a differential drive robot, I implemented a 4 wheeled skid steer robot
 * I designed custom 3D meshes, the source files can be found in the `meshes` folder of `my_robot` package
 * The project was built in local environment using Gazebo 9
