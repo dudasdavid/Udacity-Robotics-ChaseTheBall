@@ -213,7 +213,3 @@ add_dependencies(drive_bot ball_chaser_generate_messages_cpp)
 add_executable(process_image src/process_image.cpp)
 target_link_libraries(process_image ${catkin_LIBRARIES})
 add_dependencies(process_image ball_chaser_generate_messages_cpp)
-
-add_executable(teleop_key src/teleop_key.cpp)
-target_link_libraries(teleop_key ${catkin_LIBRARIES})
-add_dependencies(teleop_key ball_chaser_gencpp)
