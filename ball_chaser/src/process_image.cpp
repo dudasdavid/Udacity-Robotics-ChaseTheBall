@@ -62,7 +62,7 @@ public:
         }
         else {
             // forward
-            drive_robot(0.2, 0);
+            drive_robot(0.4, 0);
         }
         
     }
