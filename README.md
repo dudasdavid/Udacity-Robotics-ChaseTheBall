@@ -2,7 +2,9 @@
 
 ## Project 2/5: Go Chase It!
 
-![alt text][image3]
+[![Go Chase It!](./documentation/video.png)](https://youtu.be/D5K0EeO6JMk)
+
+
 
 [//]: # (Image References)
 
@@ -86,6 +88,8 @@ tree
 * The project was built in local environment using Gazebo 9
 * Local environment was Ubuntu 18.04 running in Windows WSL2
 * The warning messages in the terminal window was caused by an ALSA driver issue of the WSL2
+* Lidar range is set to 360 degree
 
 ![alt text][image1]
+![alt text][image3]
 ![alt text][image2]
