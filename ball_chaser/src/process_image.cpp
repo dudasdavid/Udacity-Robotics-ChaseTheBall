@@ -31,9 +31,9 @@ public:
     
     // Loop through each pixel in the image and check if its equal to the first one
     for (int i = 0; i < img.height * img.step; i++) {
-        if (img.data[i] == white_pixel) {
+        if ((img.data[i] == white_pixel) && (img.data[i++] == white_pixel) && (img.data[i++] == white_pixel)) {
             // x coordinate can be calculated with the formula:
-            location += i%img.height;
+            location += (i % img.step) / 3;
             nr_location++;
             is_ball = true;
             is_changed_ = true;
@@ -52,13 +52,13 @@ public:
         location /= nr_location;
         ROS_INFO_STREAM("Ball location: " + std::to_string(location));
         //ROS_INFO_STREAM("location: " + std::to_string(location) + " , img.height: " + std::to_string(img.height) + " , img.width: " + std::to_string(img.width));
-        if (location < img.width/3+75){
+        if (location < img.width/3){
             //turn left
-            drive_robot(0.2, 1);
+            drive_robot(0.0, 1);
         }
-        else if (location > 2*img.width/3-75){
+        else if (location > 2*img.width/3){
             //turn right
-            drive_robot(0.2, -1);
+            drive_robot(0.0, -1);
         }
         else {
             // forward
